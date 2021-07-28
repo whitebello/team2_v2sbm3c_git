@@ -29,7 +29,7 @@ public class ScheduleCont {
    * @return
    */
   @RequestMapping(value="/schedule/schedule.do", method=RequestMethod.GET )
-  public ModelAndView schedule(ScheduleVO scheduleVO, HttpSession session) {
+  public ModelAndView schedule(HttpSession session) {
     ModelAndView mav = new ModelAndView();
     
     if (session.getAttribute("id") == null) {  // 로그인을 안했으면 로그인페이지로 이동하라

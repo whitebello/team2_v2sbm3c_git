@@ -59,7 +59,7 @@ var cday = [];
 var professor = [];
 var textbook = [];
 
-// window.addEventListener('load', load(memberno));
+//window.addEventListener('load', load(memberno));
 
 function load(memberno) {
   var params = "";
@@ -112,6 +112,7 @@ function load(memberno) {
     }
   );  //  $.ajax END
 }
+
 function randomColor() {
   var colorCode ='#'+Math.round(Math.random() * 0xffffff).toString(16);
   return colorCode;

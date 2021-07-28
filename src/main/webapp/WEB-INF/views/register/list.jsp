@@ -52,8 +52,8 @@
         
         <TABLE class='table table_top_margin'>
           <colgroup>
-            <col style='width: 15%;'/>
-            <col style='width: 15%;'/>
+            <col style='width: 10%;'/>
+            <col style='width: 20%;'/>
             <col style='width: 20%;'/> 
             <col style='width: 20%;'/>
             <col style='width: 20%;'/>
@@ -90,8 +90,6 @@
         <div class="content_body_bottom ">
           <button type='button' class="btn" id="btn_create" style="border: solid 1px;" 
                   onclick="b_c_btn(${commgrpno})">글쓰기</button>  
-<%--           <button type='button' class="btn" id="board style="border: solid 1px;" 
-                  onclick="location.href='./create.do?commgrpno=${param.commgrpno }&word=${param.word }&now_page=${param.now_page }'">글쓰기</button>   --%>
         </div>
           
         <DIV class='content_body_bottom_c_page'>${paging }</DIV>    

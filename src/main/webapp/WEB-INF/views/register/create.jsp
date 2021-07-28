@@ -199,7 +199,7 @@ function register() { // 회원 가입 처리
       </div>
       <div class="form-group">
           <label for="inputPassword">비밀번호</label>
-          <input type="text" class="form-control" name="passwd" id="passwd" value='' placeholder="비밀번호를 입력해주세요">
+          <input type="password" class="form-control" name="passwd" id="passwd" value='' placeholder="비밀번호를 입력해주세요">
       </div>
       <div class="form-group">
           <label for="inputPasswordCheck">비밀번호 확인</label>

@@ -69,7 +69,7 @@
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="/payment/list_by_memberno.do?memberno=${memberno }">구입 목록</a></li>
               <li><a class="dropdown-item" href="/selling/list_all.do?memberno=${memberno }">판매 목록</a></li>
-              <li><a class="dropdown-item" href="/review/list_by_memberno.do?memberno=${memberno}">리뷰</a></li>
+              <li><a class="dropdown-item" href="/review/list_by_memberno.do?memberno=${sessionScope.memberno}">리뷰</a></li>
               <li><a class="dropdown-item" href="/message/list.do?memberno=${sessionScope.memberno }">쪽지</a></li>
             </ul>
           </li>

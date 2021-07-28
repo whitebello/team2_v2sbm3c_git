@@ -55,6 +55,7 @@ public class Board_RegisterVO {
   private String mdate = "";
   /** 회원등급 */
   private int grade = 0;
+  
   public int getB_boardno() {
     return b_boardno;
   }

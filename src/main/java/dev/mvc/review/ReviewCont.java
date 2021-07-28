@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -195,18 +196,25 @@ public class ReviewCont {
    * @return
    */
   @RequestMapping(value="/review/list_by_memberno.do", method=RequestMethod.GET )
-  public ModelAndView list_by_memberno(int memberno) { 
+  public ModelAndView list_by_memberno(HttpSession session) { 
     ModelAndView mav = new ModelAndView();
+    
+    if(session.getAttribute("memberno") != null) {
+      int memberno = (int)session.getAttribute("memberno");
 
-    List<ReviewVO> list = this.reviewProc.list_by_memberno(memberno);
-    mav.addObject("list", list);
-
-    // 조인 목록
-    List<Product_ReviewVO> list2 = this.reviewProc.list_all_join();
-    mav.addObject("list2", list2); // request.setAttribute("list", list);
-
-    mav.setViewName("/review/list_by_memberno"); // webapp/WEB-INF/views/review/list_by_memberno.jsp
-   
+      List<ReviewVO> list = this.reviewProc.list_by_memberno(memberno);
+      mav.addObject("list", list);
+  
+      // 조인 목록
+      List<Product_ReviewVO> list2 = this.reviewProc.list_all_join();
+      mav.addObject("list2", list2); // request.setAttribute("list", list);
+  
+      mav.setViewName("/review/list_by_memberno"); // webapp/WEB-INF/views/review/list_by_memberno.jsp
+    } else {
+      // System.out.println("로그인 페이지 이동");
+      mav.addObject("return_url", "/review/list_by_memberno.do"); // 로그인 후 이동할 주소
+      mav.setViewName("redirect:/register/login.do");
+    }
     return mav; // forward
   }
   

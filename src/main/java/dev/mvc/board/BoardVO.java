@@ -8,10 +8,8 @@ public class BoardVO {
     boardno                           NUMBER(10)     NOT NULL    PRIMARY KEY,
     memberno                          NUMBER(10)     NULL ,
     commgrpno                         NUMBER(10)     NULL ,
-    bookno                            NUMBER(10)     NULL ,
     title                             VARCHAR2(100)    NOT NULL,
     bcon                              CLOB     NOT NULL,
-    brecom                            NUMBER(10)     DEFAULT 0     NOT NULL,
     bcnt                              NUMBER(10)     DEFAULT 0     NOT NULL,
     breplycnt                         NUMBER(10)     DEFAULT 0     NOT NULL,
     brdate                            DATE     NOT NULL,
@@ -30,14 +28,10 @@ public class BoardVO {
   private int memberno;
   /** 커뮤니티 그룹 번호 */
   private int commgrpno;
-  /** 전공도서 번호 */
-  private int bookno;
   /** 제목 */
   private String title;
   /** 내용 */
   private String bcon;
-  /** 추천수 */
-  private int brecom;
   /** 조회수 */
   private int bcnt;
   /** 댓글수 */
@@ -85,12 +79,6 @@ public class BoardVO {
   public void setCommgrpno(int commgrpno) {
     this.commgrpno = commgrpno;
   }
-  public int getBookno() {
-    return bookno;
-  }
-  public void setBookno(int bookno) {
-    this.bookno = bookno;
-  }
   public String getTitle() {
     return title;
   }
@@ -102,12 +90,6 @@ public class BoardVO {
   }
   public void setBcon(String bcon) {
     this.bcon = bcon;
-  }
-  public int getBrecom() {
-    return brecom;
-  }
-  public void setBrecom(int brecom) {
-    this.brecom = brecom;
   }
   public int getBcnt() {
     return bcnt;

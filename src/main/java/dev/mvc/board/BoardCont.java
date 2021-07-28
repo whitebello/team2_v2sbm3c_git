@@ -193,7 +193,7 @@ public class BoardCont {
    * @return
    */
    @RequestMapping(value = "/board/list_by_commgrpno.do", method = RequestMethod.GET)
-    public ModelAndView list_by_cateno(int commgrpno, int memberno) { 
+    public ModelAndView list_by_commgrpno(int commgrpno, int memberno) { 
       ModelAndView mav = new  ModelAndView();  
       
       CommgrpVO commgrpVO = this.commgrpProc.read(commgrpno);

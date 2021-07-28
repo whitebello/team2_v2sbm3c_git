@@ -35,13 +35,13 @@ CREATE SEQUENCE schedule_seq
 
 -- 문자열 테스트  
 INSERT INTO schedule(classno, memberno, cday, classname, professor, starttime, endtime, textbook)
-VALUES(schedule_seq.nextval, 2, 0, '어둠의마법학', '스네이프', 9, 11, '약초학 개정3판');
+VALUES(schedule_seq.nextval, 1, 0, '어둠의마법학', '스네이프', 9, 11, '약초학 개정3판');
 
 INSERT INTO schedule(classno, memberno, cday, classname, professor, starttime, endtime, textbook)
-VALUES(schedule_seq.nextval, 2, 0, '해리포터학개론', '해리포터', 14, 16, '볼드모트잡는법 개정2판');
+VALUES(schedule_seq.nextval, 1, 0, '해리포터학개론', '해리포터', 14, 16, '볼드모트잡는법 개정2판');
 
 INSERT INTO schedule(classno, memberno, cday, classname, professor, starttime, endtime, textbook)
-VALUES(schedule_seq.nextval, 2, 1, '사랑학개론', '백종환', 9, 11, '사랑이제일쉬웠어요');
+VALUES(schedule_seq.nextval, 1, 1, '사랑학개론', '백종환', 9, 11, '사랑이제일쉬웠어요');
 
 INSERT INTO schedule(classno, memberno, cday, classname, starttime, endtime)
 VALUES(schedule_seq.nextval, 2, 'tue', 'SPRING', 15, 16);

@@ -136,7 +136,7 @@ function cart_ajax(productno, stateno, bookno) {
      );// $.ajax end 
  }
 
- functㅑon p_score(){
+ function p_score(){
    console.log("준비");
     
  }
